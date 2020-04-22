@@ -33,17 +33,11 @@ RandomMouseMove(x2,y2,Speed)
 		x_n := Round( x_r * cos_phi - y_phi * sin_phi)
 		y_n := Round( x_r * sin_phi + y_phi * cos_phi)
 		
-		if (x_r = 1)
-		{
-			MouseMove, x_n, y_n, 0, Relative
 		
-		}
-		else
-		{
-			x_move := x_n - x_old
-			y_move := y_n - y_old
-			MouseMove, x_move, y_move, 0, Relative
-		}
+		x_move := x_n - x_old
+		y_move := y_n - y_old
+		MouseMove, x_move, y_move, 1, Relative
+		
 
 		;MsgBox, x_move = %x_move%, y_move = %y_move%
 		

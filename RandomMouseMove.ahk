@@ -4,7 +4,7 @@ Send Input  ; Recommended for new scripts due to its superior speed and reliabil
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 
-RandomMouseMove(x2,y2,Speed)
+RandomMouseMove(x2,y2, Speed)
 {
 	;Starting Point
 	MouseGetPos, x1, y1
@@ -36,7 +36,7 @@ RandomMouseMove(x2,y2,Speed)
 		
 		x_move := x_n - x_old
 		y_move := y_n - y_old
-		MouseMove, x_move, y_move, 1, Relative
+		MouseMove, x_move, y_move, Speed, Relative
 		
 
 		;MsgBox, x_move = %x_move%, y_move = %y_move%
@@ -46,9 +46,10 @@ RandomMouseMove(x2,y2,Speed)
 
 
 		
-		x_r := x_r + Speed
+		x_r := x_r + 2
 	}
 
 	MouseMove, x2, y2, 1
+	
 
 }
